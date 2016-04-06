@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<style>
+    canvas {
+        background-image: url("resimler/bg.png");
+    }
+    .page{
+        margin-top: 40px;
+    }
+    .body1{
+        background-image: url("bg2.jpg");
+    }
+    .bg2 {
+       background-color: #ffffff;
+       padding: 20px 20px 20px 20px;
+    }
+    .center {
+        float: none;
+        margin-left: 12.5px;
+        margin-right: auto;
+    }
+</style>
+
+
+<html>
+    <head>
+        <script src="js/angular.js"></script>
+        <title>HTML5 Tetris</title>
+        <link rel='stylesheet' href='style.css' />
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+    </head>
+
+<body class="body1">
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        
+    
+        <div class="container page">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="bg2">
+                        <strong>OYUNDA YAPILANLAR</strong><br /> <br />1-Bu Bilgisayar Grafikleri dersi için dizayn edilmiştir.<br />
+                        2-HTML-5, Twitter Bootstrap Angular JS kullanıldı.<br />3-Oyun w-a-s-d kombinasyonları ile oynanmaktadır.<br />
+                        <br /><b></b><br />
+                    </div>
+                    <br />
+                    <button type="button" class="btn btn-danger btn-block" ng-click="test();">OYUNA BAŞLA</button>
+                </div>
+                <div class="col-md-4">
+                    <div class="center">
+                        <canvas  width='300' height='600' class="center"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4 bg2" >
+                    <div>
+                        Puan: {{score}}                     
+
+                    </div>
+                   
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+  
+    <script src='js/controller.js'></script>
+    <script src='js/render.js'></script>
+    <script src='js/tetris.js'></script>
+
+</body>
+</html>
